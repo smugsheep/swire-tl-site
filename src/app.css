@@ -1,0 +1,143 @@
+@import '@fontsource-variable/noto-sans-jp';
+@import '@fontsource-variable/noto-serif-jp';
+
+html {
+	/* font */
+	--font-sans: 'Noto Sans JP Variable', sans-serif;
+	--font-serif: 'Noto Serif JP Variable', serif;
+
+	/* dark */
+	--brand-dark: #c72878;
+	--text-1-dark: #fafdff;
+	--text-2-dark: #8f9193;
+	--surface-1-dark: #484246;
+	--surface-2-dark: #686266;
+	--surface-3-dark: #888286;
+	--surface-4-dark: #a8a2a6;
+	--background-dark: #1e1c1d;
+	--border-dark: #dadada;
+
+	/* light */
+	--brand-light: #c72878;
+	--text-1-light: #1e1a1a;
+	--text-2-light: #2c2020;
+	--surface-1-light: #dadada;
+	--surface-2-light: #bababa;
+	--surface-3-light: #9a9a9a;
+	--surface-4-light: #7a7a7a;
+	--background-light: #fafafa;
+	--border-light: #3d2d2d;
+}
+
+:root {
+	color-scheme: dark;
+
+	--brand: var(--brand-dark);
+	--text-1: var(--text-1-dark);
+	--text-2: var(--text-2-dark);
+	--surface-1: var(--surface-1-dark);
+	--surface-2: var(--surface-2-dark);
+	--surface-3: var(--surface-3-dark);
+	--surface-4: var(--surface-4-dark);
+	--background: var(--background-dark);
+	--border: var(--border-dark);
+	--link: var(--brand-dark);
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color-scheme: light;
+
+		--brand: var(--brand-light);
+		--text-1: var(--text-1-light);
+		--text-2: var(--text-2-light);
+		--surface-1: var(--surface-1-light);
+		--surface-2: var(--surface-2-light);
+		--surface-3: var(--surface-3-light);
+		--surface-4: var(--surface-4-light);
+		--background: var(--background-light);
+		--border: var(--border-light);
+		--link: var(--brand-light);
+	}
+}
+
+[color-scheme='dark'] {
+	color-scheme: dark;
+
+	--brand: var(--brand-dark);
+	--text-1: var(--text-1-dark);
+	--text-2: var(--text-2-dark);
+	--surface-1: var(--surface-1-dark);
+	--surface-2: var(--surface-2-dark);
+	--surface-3: var(--surface-3-dark);
+	--surface-4: var(--surface-4-dark);
+	--background: var(--background-dark);
+	--border: var(--border-dark);
+	--link: var(--brand-dark);
+}
+
+[color-scheme='light'] {
+	color-scheme: light;
+
+	--brand: var(--brand-light);
+	--text-1: var(--text-1-light);
+	--text-2: var(--text-2-light);
+	--surface-1: var(--surface-1-light);
+	--surface-2: var(--surface-2-light);
+	--surface-3: var(--surface-3-light);
+	--surface-4: var(--surface-4-light);
+	--background: var(--background-light);
+	--border: var(--border-light);
+	--link: var(--brand-light);
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	color: var(--text-1);
+	accent-color: var(--link);
+	background-color: var(--background);
+}
+
+body {
+	font-family: var(--font-sans);
+	margin: 0;
+}
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	padding-inline-start: 0;
+}
+
+a,
+a:visited {
+	color: var(--link);
+}
+
+.surface-1 {
+	background-color: var(--surface-1);
+	color: var(--text-2);
+}
+
+.surface-2 {
+	background-color: var(--surface-2);
+	color: var(--text-2);
+}
+
+.surface-3 {
+	background-color: var(--surface-3);
+	color: var(--text-1);
+}
+
+.surface-4 {
+	background-color: var(--surface-4);
+	color: var(--text-1);
+}
