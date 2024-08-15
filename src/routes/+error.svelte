@@ -3,7 +3,10 @@
 </script>
 
 <div class="error">
-    <h1>{$page.status}: {$page.error?.message}</h1>
+    <hgroup>
+        <h1>{$page.status}</h1>
+        <p>{$page.error?.message}</p>
+    </hgroup>
 </div>
 
 <style>
@@ -11,5 +14,15 @@
         height: 100%;
         display: grid;
         place-content: center;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 4rem;
+    }
+
+    p {
+        margin: 0;
+        font-size: 2rem;
     }
 </style>
