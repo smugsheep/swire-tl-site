@@ -11,6 +11,6 @@ export async function load({ params }) {
             meta: post.metadata
         }
     } catch (e) {
-        throw error(404, `Could not find ${params.slug}.`)
+        throw error(404, `Could not find ${params.slug} in ${params.year}/${params.month}.`)
     }
 }
