@@ -3,11 +3,11 @@ import { json } from "@sveltejs/kit"
 
 async function getPosts() {
     let posts: Post[] = []
-    const paths = import.meta.glob('/src/posts/*.md', { eager: true })
+    const paths = import.meta.glob('/src/posts/**/*.md', { eager: true })
 
     for (const path in paths) {
         const file = paths[path]
-        const slug = path.split('/').at(-1)?.replace('.md', '')
+        const slug = path.split('posts/').at(-1)?.replace('.md', '')
 
         if (file 
             && typeof file === 'object' 
