@@ -6,7 +6,8 @@ export async function load({ fetch, params }) {
     let posts: Post[] = await response.json()
 
     posts = posts.filter(post => {
-        return post.date.includes(params.year) && post.date.includes(params.month)
+        return post.date.split('-')[0].includes(params.year) 
+            && post.date.split('-')[1].includes(params.month)
     })
 
     if (posts.length === 0) {
