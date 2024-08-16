@@ -12,4 +12,4 @@ published: true
 
 awaaa...? hiiiiii
 
-![yeah](favicon.png)
+![yeah](/favicon.png)

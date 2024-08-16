@@ -1,13 +1,13 @@
-@import '@fontsource-variable/noto-sans-jp';
-@import '@fontsource-variable/noto-serif-jp';
+@import '@fontsource/kaisei-opti';
+@import '@fontsource/ibm-plex-sans-jp';
 
 html {
 	/* font */
-	--font-sans: 'Noto Sans JP Variable', sans-serif;
-	--font-serif: 'Noto Serif JP Variable', serif;
+	--font-sans: 'IBM Plex Sans JP', sans-serif;
+	--font-serif: 'Kaisei Opti', serif;
 
 	/* dark */
-	--brand-dark: #c72878;
+	--brand-dark: #f1c62c;
 	--text-1-dark: #fafdff;
 	--text-2-dark: #8f9193;
 	--surface-1-dark: #484246;
@@ -18,7 +18,7 @@ html {
 	--border-dark: #dadada;
 
 	/* light */
-	--brand-light: #c72878;
+	--brand-light: rgb(199, 40, 120);
 	--text-1-light: #1e1a1a;
 	--text-2-light: #2c2020;
 	--surface-1-light: #dadada;

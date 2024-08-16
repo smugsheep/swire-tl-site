@@ -19,7 +19,7 @@
 
     <div class="tags">
         {#each data.meta.tags as tag}
-            <span class="surface-4">&num;{tag}</span>
+            <span class="surface-3">&num;{tag}</span>
         {/each}
     </div>
 
@@ -32,5 +32,15 @@
     article {
         max-inline-size: 60ch;
         margin-inline: auto;
+    }
+
+    .tags {
+        display: flex;
+        gap: .5rem;
+    }
+
+    .tags span {
+        padding: .5rem 1rem;
+        border-radius: 24px;
     }
 </style>

@@ -8,3 +8,11 @@ export type Post = {
     tags: Tags[]
     published: boolean
 }
+
+export type Archive = {
+    [key: string]: {
+        count: number;
+        month: string;
+        year: string;
+    }
+}
