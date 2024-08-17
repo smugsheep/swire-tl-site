@@ -11,8 +11,13 @@ export type Post = {
 
 export type Archive = {
     [key: string]: {
-        count: number;
-        month: string;
-        year: string;
+        count: number
+        month: string
+        year: string
     }
+}
+
+export type TabItem = {
+    label: string
+    text: string
 }

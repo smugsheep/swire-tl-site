@@ -5,6 +5,17 @@ import { mdsvex } from 'mdsvex'
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
     extensions: ['.md'],
+    layout: 'src/posts/__layout/__layout.svelte',
+    highlight: {
+        highlighter: (code, lang) => {
+            if (lang?.includes('lyrics')) {
+                const escaped = code.replace(/{/g, '&#123;').replace(/}/g, '&#125;')
+                return `<Components.pre><code>${escaped}</code></Components.pre>`
+            }
+
+            return `<pre><code>${code}</code></pre>`
+        },
+    },
 }
 
 /** @type {import('@sveltejs/kit').Config} */

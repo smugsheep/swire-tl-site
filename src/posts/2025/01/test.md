@@ -9,7 +9,11 @@ published: true
 
 hey!
 
-```lyrics-ja
+# flyable heart!
+
+```lyrics
+> JA
+
 どんな君に逢っても…
 何気ない毎日が…
  
@@ -38,9 +42,9 @@ imagination, Merry-go-round
 immeasurably, illumination
 何気ない毎日が　キラキラ輝きますように
 祈るよ　空へ
-```
 
-```lyrics-romaji
+> ROMAJI
+
 donna kimi ni atte mo
 nanigenai mainichi ga
  
@@ -69,9 +73,9 @@ minna kokoro ni negai kakaeteru
 immeasurably, illumination
 nanigenai mainichi ga kirakira kagayakimasu you ni
 inoru yo sora e
-```
 
-```lyrics-en
+> EN
+
 No matter what kind of you I meet...
 This unremarkable everyday...
  

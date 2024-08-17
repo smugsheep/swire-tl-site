@@ -1,6 +1,6 @@
 <script lang="ts">
     import * as config from '$lib/config'
-	import { formatDate } from '$lib/utils.js'
+    import { formatDate } from '$lib/utils.js';
 
     export let data
 </script>
@@ -16,16 +16,14 @@
         <h1>{data.meta.title}</h1>
         <p>{formatDate(data.meta.date)}</p>
     </hgroup>
-
+    
     <div class="tags">
         {#each data.meta.tags as tag}
             <span class="surface-3">&num;{tag}</span>
         {/each}
     </div>
 
-    <div class="prose">
-        <svelte:component this={data.content} />
-    </div>
+    <svelte:component this={data.content} />
 </article>
 
 <style>
