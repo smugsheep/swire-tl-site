@@ -1,8 +1,10 @@
-import type { Post } from "$lib/types"
+import type { Archive, Post } from "$lib/types"
 import { json } from "@sveltejs/kit"
 
 async function getPosts() {
     let posts: Post[] = []
+    let archive: Archive = {}
+
     const paths = import.meta.glob('/src/posts/**/*.md', { eager: true })
 
     for (const path in paths) {
@@ -18,6 +20,15 @@ async function getPosts() {
             const post = { ...metadata, slug } satisfies Post
 
             post.published && posts.push(post)
+
+            const [year, month] = post.date.split('-').slice(0, 2)
+            const key = `${month}-${year}`
+
+            if (!archive[key]) {
+                archive[key] = { count: 0, month, year };
+            }
+
+            archive[key].count += 1
         }
     }
 
@@ -25,10 +36,10 @@ async function getPosts() {
         new Date(second.date).getTime() - new Date(first.date).getTime()
     )
  
-    return posts
+    return { posts, archive }
 }
 
 export async function GET() {
-    const posts = await getPosts()
-    return json(posts)
+    const { posts, archive } = await getPosts()
+    return json({ posts, archive })
 }

@@ -7,6 +7,7 @@ const mdsvexOptions = {
     extensions: ['.md'],
     layout: 'src/posts/__layout/__layout.svelte',
     highlight: {
+        // https://github.com/pngwn/MDsveX/issues/100#issuecomment-671019661
         highlighter: (code, lang) => {
             if (lang?.includes('lyrics')) {
                 const escaped = code.replace(/{/g, '&#123;').replace(/}/g, '&#125;')
